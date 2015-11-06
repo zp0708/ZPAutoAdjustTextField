@@ -20,6 +20,7 @@
 		0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		0DE1EA861BEC535C00B8BE15 /* VBFDoubleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */; settings = {ASSET_TAGS = (); }; };
 		0DE1EA871BEC535C00B8BE15 /* VBFPopFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA8B1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */; settings = {ASSET_TAGS = (); }; };
 		B26E652234A81D9FB43F86B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841ED2B908502FD88E4105A8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFDoubleSegment.m; sourceTree = "<group>"; };
 		0DE1EA841BEC535C00B8BE15 /* VBFPopFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFPopFlatButton.h; sourceTree = "<group>"; };
 		0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFPopFlatButton.m; sourceTree = "<group>"; };
+		0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "2015-11-06 14_23_43.gif"; sourceTree = "<group>"; };
 		1C9D74C9584859EA46505B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33C0F8A58325C2D301B1C757 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		841ED2B908502FD88E4105A8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		0DE1EA3F1BEC52B300B8BE15 /* ZPAutoAdjustTextField */ = {
 			isa = PBXGroup;
 			children = (
+				0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */,
 				0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */,
 				0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */,
 				0DE1EA731BEC52D600B8BE15 /* UIView+Extension.h */,
@@ -303,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE1EA8B1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif in Resources */,
 				0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */,
 				0DE1EA501BEC52B300B8BE15 /* LaunchScreen.storyboard in Resources */,
 				0DE1EA4D1BEC52B300B8BE15 /* Assets.xcassets in Resources */,
