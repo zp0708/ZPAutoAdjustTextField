@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DE1EA421BEC52B300B8BE15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA411BEC52B300B8BE15 /* main.m */; };
+		0DE1EA451BEC52B300B8BE15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */; };
+		0DE1EA4D1BEC52B300B8BE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */; };
+		0DE1EA501BEC52B300B8BE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA4E1BEC52B300B8BE15 /* LaunchScreen.storyboard */; };
+		0DE1EA5B1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA5A1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m */; };
+		0DE1EA661BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA651BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m */; };
+		0DE1EA7C1BEC52D600B8BE15 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA7E1BEC52D600B8BE15 /* ZPAutoAdjustTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA861BEC535C00B8BE15 /* VBFDoubleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */; settings = {ASSET_TAGS = (); }; };
+		0DE1EA871BEC535C00B8BE15 /* VBFPopFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */; settings = {ASSET_TAGS = (); }; };
+		B26E652234A81D9FB43F86B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841ED2B908502FD88E4105A8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DE1EA571BEC52B300B8BE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DE1EA351BEC52B300B8BE15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DE1EA3C1BEC52B300B8BE15;
+			remoteInfo = ZPAutoAdjustTextField;
+		};
+		0DE1EA621BEC52B300B8BE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DE1EA351BEC52B300B8BE15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DE1EA3C1BEC52B300B8BE15;
+			remoteInfo = ZPAutoAdjustTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DE1EA3D1BEC52B300B8BE15 /* ZPAutoAdjustTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPAutoAdjustTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE1EA411BEC52B300B8BE15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DE1EA4F1BEC52B300B8BE15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DE1EA511BEC52B300B8BE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE1EA561BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZPAutoAdjustTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE1EA5A1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAutoAdjustTextFieldTests.m; sourceTree = "<group>"; };
+		0DE1EA5C1BEC52B300B8BE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE1EA611BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZPAutoAdjustTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE1EA651BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAutoAdjustTextFieldUITests.m; sourceTree = "<group>"; };
+		0DE1EA671BEC52B300B8BE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE1EA731BEC52D600B8BE15 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		0DE1EA751BEC52D600B8BE15 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		0DE1EA771BEC52D600B8BE15 /* ZPAutoAdjustTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPAutoAdjustTextField.h; sourceTree = "<group>"; };
+		0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPAutoAdjustTextField.m; sourceTree = "<group>"; };
+		0DE1EA791BEC52D600B8BE15 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0DE1EA821BEC535C00B8BE15 /* VBFDoubleSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFDoubleSegment.h; sourceTree = "<group>"; };
+		0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFDoubleSegment.m; sourceTree = "<group>"; };
+		0DE1EA841BEC535C00B8BE15 /* VBFPopFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFPopFlatButton.h; sourceTree = "<group>"; };
+		0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFPopFlatButton.m; sourceTree = "<group>"; };
+		1C9D74C9584859EA46505B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		33C0F8A58325C2D301B1C757 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		841ED2B908502FD88E4105A8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DE1EA3A1BEC52B300B8BE15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B26E652234A81D9FB43F86B7 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA531BEC52B300B8BE15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA5E1BEC52B300B8BE15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DE1EA341BEC52B300B8BE15 = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA3F1BEC52B300B8BE15 /* ZPAutoAdjustTextField */,
+				0DE1EA591BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests */,
+				0DE1EA641BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests */,
+				0DE1EA3E1BEC52B300B8BE15 /* Products */,
+				5BCE50B026942E4096128A5C /* Pods */,
+				2CD8AD5E99FF067FB36C0FF3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0DE1EA3E1BEC52B300B8BE15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA3D1BEC52B300B8BE15 /* ZPAutoAdjustTextField.app */,
+				0DE1EA561BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.xctest */,
+				0DE1EA611BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DE1EA3F1BEC52B300B8BE15 /* ZPAutoAdjustTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */,
+				0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */,
+				0DE1EA731BEC52D600B8BE15 /* UIView+Extension.h */,
+				0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */,
+				0DE1EA751BEC52D600B8BE15 /* UIBarButtonItem+Extension.h */,
+				0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */,
+				0DE1EA771BEC52D600B8BE15 /* ZPAutoAdjustTextField.h */,
+				0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */,
+				0DE1EA791BEC52D600B8BE15 /* ViewController.h */,
+				0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */,
+				0DE1EA811BEC535C00B8BE15 /* VBFPopFlatButtonClasses */,
+				0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */,
+				0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */,
+				0DE1EA4E1BEC52B300B8BE15 /* LaunchScreen.storyboard */,
+				0DE1EA511BEC52B300B8BE15 /* Info.plist */,
+				0DE1EA401BEC52B300B8BE15 /* Supporting Files */,
+			);
+			path = ZPAutoAdjustTextField;
+			sourceTree = "<group>";
+		};
+		0DE1EA401BEC52B300B8BE15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA411BEC52B300B8BE15 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DE1EA591BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA5A1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m */,
+				0DE1EA5C1BEC52B300B8BE15 /* Info.plist */,
+			);
+			path = ZPAutoAdjustTextFieldTests;
+			sourceTree = "<group>";
+		};
+		0DE1EA641BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA651BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m */,
+				0DE1EA671BEC52B300B8BE15 /* Info.plist */,
+			);
+			path = ZPAutoAdjustTextFieldUITests;
+			sourceTree = "<group>";
+		};
+		0DE1EA811BEC535C00B8BE15 /* VBFPopFlatButtonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1EA821BEC535C00B8BE15 /* VBFDoubleSegment.h */,
+				0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */,
+				0DE1EA841BEC535C00B8BE15 /* VBFPopFlatButton.h */,
+				0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */,
+			);
+			path = VBFPopFlatButtonClasses;
+			sourceTree = "<group>";
+		};
+		2CD8AD5E99FF067FB36C0FF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				841ED2B908502FD88E4105A8 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BCE50B026942E4096128A5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C9D74C9584859EA46505B1A /* Pods.debug.xcconfig */,
+				33C0F8A58325C2D301B1C757 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DE1EA3C1BEC52B300B8BE15 /* ZPAutoAdjustTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE1EA6A1BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextField" */;
+			buildPhases = (
+				5F92402F41E69774BE8A4528 /* Check Pods Manifest.lock */,
+				0DE1EA391BEC52B300B8BE15 /* Sources */,
+				0DE1EA3A1BEC52B300B8BE15 /* Frameworks */,
+				0DE1EA3B1BEC52B300B8BE15 /* Resources */,
+				5B6B41001F66744244294825 /* Embed Pods Frameworks */,
+				B12E22A397D31899381761EF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZPAutoAdjustTextField;
+			productName = ZPAutoAdjustTextField;
+			productReference = 0DE1EA3D1BEC52B300B8BE15 /* ZPAutoAdjustTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DE1EA551BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE1EA6D1BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextFieldTests" */;
+			buildPhases = (
+				0DE1EA521BEC52B300B8BE15 /* Sources */,
+				0DE1EA531BEC52B300B8BE15 /* Frameworks */,
+				0DE1EA541BEC52B300B8BE15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DE1EA581BEC52B300B8BE15 /* PBXTargetDependency */,
+			);
+			name = ZPAutoAdjustTextFieldTests;
+			productName = ZPAutoAdjustTextFieldTests;
+			productReference = 0DE1EA561BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0DE1EA601BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE1EA701BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextFieldUITests" */;
+			buildPhases = (
+				0DE1EA5D1BEC52B300B8BE15 /* Sources */,
+				0DE1EA5E1BEC52B300B8BE15 /* Frameworks */,
+				0DE1EA5F1BEC52B300B8BE15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DE1EA631BEC52B300B8BE15 /* PBXTargetDependency */,
+			);
+			name = ZPAutoAdjustTextFieldUITests;
+			productName = ZPAutoAdjustTextFieldUITests;
+			productReference = 0DE1EA611BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DE1EA351BEC52B300B8BE15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "融通汇信";
+				TargetAttributes = {
+					0DE1EA3C1BEC52B300B8BE15 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					0DE1EA551BEC52B300B8BE15 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 0DE1EA3C1BEC52B300B8BE15;
+					};
+					0DE1EA601BEC52B300B8BE15 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 0DE1EA3C1BEC52B300B8BE15;
+					};
+				};
+			};
+			buildConfigurationList = 0DE1EA381BEC52B300B8BE15 /* Build configuration list for PBXProject "ZPAutoAdjustTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0DE1EA341BEC52B300B8BE15;
+			productRefGroup = 0DE1EA3E1BEC52B300B8BE15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DE1EA3C1BEC52B300B8BE15 /* ZPAutoAdjustTextField */,
+				0DE1EA551BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests */,
+				0DE1EA601BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DE1EA3B1BEC52B300B8BE15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */,
+				0DE1EA501BEC52B300B8BE15 /* LaunchScreen.storyboard in Resources */,
+				0DE1EA4D1BEC52B300B8BE15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA541BEC52B300B8BE15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA5F1BEC52B300B8BE15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B6B41001F66744244294825 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F92402F41E69774BE8A4528 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B12E22A397D31899381761EF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DE1EA391BEC52B300B8BE15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */,
+				0DE1EA7E1BEC52D600B8BE15 /* ZPAutoAdjustTextField.m in Sources */,
+				0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */,
+				0DE1EA7C1BEC52D600B8BE15 /* UIView+Extension.m in Sources */,
+				0DE1EA861BEC535C00B8BE15 /* VBFDoubleSegment.m in Sources */,
+				0DE1EA871BEC535C00B8BE15 /* VBFPopFlatButton.m in Sources */,
+				0DE1EA451BEC52B300B8BE15 /* AppDelegate.m in Sources */,
+				0DE1EA421BEC52B300B8BE15 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA521BEC52B300B8BE15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE1EA5B1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE1EA5D1BEC52B300B8BE15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE1EA661BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DE1EA581BEC52B300B8BE15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DE1EA3C1BEC52B300B8BE15 /* ZPAutoAdjustTextField */;
+			targetProxy = 0DE1EA571BEC52B300B8BE15 /* PBXContainerItemProxy */;
+		};
+		0DE1EA631BEC52B300B8BE15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DE1EA3C1BEC52B300B8BE15 /* ZPAutoAdjustTextField */;
+			targetProxy = 0DE1EA621BEC52B300B8BE15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DE1EA4E1BEC52B300B8BE15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DE1EA4F1BEC52B300B8BE15 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DE1EA681BEC52B300B8BE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0DE1EA691BEC52B300B8BE15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DE1EA6B1BEC52B300B8BE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9D74C9584859EA46505B1A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZPAutoAdjustTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0DE1EA6C1BEC52B300B8BE15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C0F8A58325C2D301B1C757 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZPAutoAdjustTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0DE1EA6E1BEC52B300B8BE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZPAutoAdjustTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZPAutoAdjustTextField.app/ZPAutoAdjustTextField";
+			};
+			name = Debug;
+		};
+		0DE1EA6F1BEC52B300B8BE15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZPAutoAdjustTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZPAutoAdjustTextField.app/ZPAutoAdjustTextField";
+			};
+			name = Release;
+		};
+		0DE1EA711BEC52B300B8BE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZPAutoAdjustTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZPAutoAdjustTextField;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0DE1EA721BEC52B300B8BE15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZPAutoAdjustTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rongtonghuixin.ZPAutoAdjustTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZPAutoAdjustTextField;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DE1EA381BEC52B300B8BE15 /* Build configuration list for PBXProject "ZPAutoAdjustTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE1EA681BEC52B300B8BE15 /* Debug */,
+				0DE1EA691BEC52B300B8BE15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DE1EA6A1BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE1EA6B1BEC52B300B8BE15 /* Debug */,
+				0DE1EA6C1BEC52B300B8BE15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DE1EA6D1BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE1EA6E1BEC52B300B8BE15 /* Debug */,
+				0DE1EA6F1BEC52B300B8BE15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DE1EA701BEC52B300B8BE15 /* Build configuration list for PBXNativeTarget "ZPAutoAdjustTextFieldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE1EA711BEC52B300B8BE15 /* Debug */,
+				0DE1EA721BEC52B300B8BE15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DE1EA351BEC52B300B8BE15 /* Project object */;
+}
