@@ -226,13 +226,6 @@
     NSDictionary *dict = @{RTHXCustomTextFieldBarButtonItem : btn, RTHXCustomTextFieldCustomTextField : self};
     NSNotification *notice = [NSNotification notificationWithName:RTHXCustomTextFieldDidClickedPreviousBarButtonItem object:nil userInfo:dict];
     [[NSNotificationCenter defaultCenter] postNotification:notice];
-    
-    NSInteger index = [_fieldArr indexOfObject:self];
-    if(index == 0){
-        [_fieldArr.lastObject becomeFirstResponder];
-        return;
-    }
-    [_fieldArr[index - 1] becomeFirstResponder];
 }
 
 - (void)nextButtonClicked:(UIBarButtonItem *)btn
@@ -246,13 +239,6 @@
     NSDictionary *dict = @{RTHXCustomTextFieldBarButtonItem : btn, RTHXCustomTextFieldCustomTextField : self};
     NSNotification *notice = [NSNotification notificationWithName:RTHXCustomTextFieldDidClickedNextBarButtonItem object:nil userInfo:dict];
     [[NSNotificationCenter defaultCenter] postNotification:notice];
-    
-    NSInteger index = [_fieldArr indexOfObject:self];
-    if(index == _fieldArr.count - 1){
-        [_fieldArr.firstObject becomeFirstResponder];
-        return;
-    }
-    [_fieldArr[index + 1] becomeFirstResponder];
 }
 
 - (void)cancelButtonClicked:(UIBarButtonItem *)btn

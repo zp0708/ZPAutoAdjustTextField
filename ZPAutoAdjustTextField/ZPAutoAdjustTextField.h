@@ -34,7 +34,6 @@ typedef void(^TextFieldCallBack)(UIBarButtonItem * , ZPAutoAdjustTextField *);
 @property (assign, nonatomic) CustomTextFieldType textType;
 @property (assign, nonatomic) CGFloat adjustHeight;
 @property (weak, nonatomic) id<CustomTextFieldDelegate> customDelegate;
-@property (strong, nonatomic) NSArray *fieldArr;
 
 - (void)adjustTextFieldFrameWhenBeginEdtingWithView:(UIView *)view;
 

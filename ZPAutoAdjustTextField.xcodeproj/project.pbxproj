@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D242FB11BF0883200E5402C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D242FB01BF0883200E5402C /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0DE1EA421BEC52B300B8BE15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA411BEC52B300B8BE15 /* main.m */; };
 		0DE1EA451BEC52B300B8BE15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */; };
 		0DE1EA4D1BEC52B300B8BE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D242FAF1BF0883200E5402C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		0D242FB01BF0883200E5402C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0DE1EA3D1BEC52B300B8BE15 /* ZPAutoAdjustTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPAutoAdjustTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1EA411BEC52B300B8BE15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */,
 				0DE1EA791BEC52D600B8BE15 /* ViewController.h */,
 				0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */,
+				0D242FAF1BF0883200E5402C /* SecondViewController.h */,
+				0D242FB01BF0883200E5402C /* SecondViewController.m */,
 				0DE1EA811BEC535C00B8BE15 /* VBFPopFlatButtonClasses */,
 				0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */,
 				0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */,
@@ -382,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D242FB11BF0883200E5402C /* SecondViewController.m in Sources */,
 				0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */,
 				0DE1EA7E1BEC52D600B8BE15 /* ZPAutoAdjustTextField.m in Sources */,
 				0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */,
