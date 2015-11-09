@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    NSMutableArray *fieldArr = [NSMutableArray array];
     NSArray *titleArr = @[@"用户名",@"密码",@"手机",@"邮箱",@"验证码",@"年龄",@"性别",@"省",@"市"];
     for (NSInteger i = 0; i < titleArr.count; i++) {
         ZPAutoAdjustTextField *field = [[ZPAutoAdjustTextField alloc]initWithFrame:CGRectMake(10, 50 * (i + 1) + 40, self.view.width - 20,30)];
@@ -29,7 +28,6 @@
         field.placeholder   = titleArr[i];
         field.font   = [UIFont systemFontOfSize:14];
         field.customDelegate = self;
-        [fieldArr addObject:field];
     }
 
     // Do any additional setup after loading the view, typically from a nib.
@@ -37,7 +35,7 @@
 
 - (void)customTextField:(ZPAutoAdjustTextField *)textField previousBarButtonItemDidClicked:(UIBarButtonItem *)item
 {
-    NSInteger index = [_fieldArr indexOfObject:self.fieldArr];
+    NSInteger index = [_fieldArr indexOfObject:textField];
     if(index == 0){
         [_fieldArr.lastObject becomeFirstResponder];
         return;
@@ -47,7 +45,7 @@
 
 - (void)customTextField:(ZPAutoAdjustTextField *)textField nextBarButtonItemDidClicked:(UIBarButtonItem *)item
 {
-    NSInteger index = [_fieldArr indexOfObject:self.fieldArr];
+    NSInteger index = [_fieldArr indexOfObject:textField];
     if(index == _fieldArr.count - 1){
         [_fieldArr.firstObject becomeFirstResponder];
         return;
@@ -66,9 +64,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc
-{
-    self.fieldArr = nil;
+- (NSMutableArray *)fieldArr{
+    if (_fieldArr == nil) {
+        _fieldArr = [NSMutableArray array];
+    }
+    return _fieldArr;
 }
 
 @end
