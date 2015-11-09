@@ -46,7 +46,6 @@
         [_fieldArr.firstObject becomeFirstResponder];
         return;
     }
-    
     [_fieldArr[index + 1] becomeFirstResponder];
 }
 
