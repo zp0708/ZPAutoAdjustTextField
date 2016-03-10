@@ -28,6 +28,8 @@
         field.placeholder   = titleArr[i];
         field.font   = [UIFont systemFontOfSize:14];
         field.customDelegate = self;
+        field.verifyType = CustomTextFieldTextFormMobile;
+        field.textType = CustomTextFieldToolbarTypePreviousNextCancelEnsure;
     }
 
     // Do any additional setup after loading the view, typically from a nib.
@@ -35,22 +37,12 @@
 
 - (void)customTextField:(ZPAutoAdjustTextField *)textField previousBarButtonItemDidClicked:(UIBarButtonItem *)item
 {
-    NSInteger index = [_fieldArr indexOfObject:textField];
-    if(index == 0){
-        [_fieldArr.lastObject becomeFirstResponder];
-        return;
-    }
-    [_fieldArr[index - 1] becomeFirstResponder];
+    NSLog(@"%s",__func__);
 }
 
 - (void)customTextField:(ZPAutoAdjustTextField *)textField nextBarButtonItemDidClicked:(UIBarButtonItem *)item
 {
-    NSInteger index = [_fieldArr indexOfObject:textField];
-    if(index == _fieldArr.count - 1){
-        [_fieldArr.firstObject becomeFirstResponder];
-        return;
-    }
-    [_fieldArr[index + 1] becomeFirstResponder];
+    NSLog(@"%s",__func__);
 }
 
 - (BOOL)customTextFieldShouldBeginEditing:(ZPAutoAdjustTextField *)textField
@@ -58,6 +50,12 @@
     [textField adjustTextFieldFrameWhenBeginEdtingWithView:self.view];
     return YES;
 }
+
+- (NSArray *)allTextFieldsWithCustomTextField:(ZPAutoAdjustTextField *)textField{
+    return _fieldArr;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

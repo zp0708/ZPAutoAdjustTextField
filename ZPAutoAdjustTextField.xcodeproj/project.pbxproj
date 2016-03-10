@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D242FB11BF0883200E5402C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D242FB01BF0883200E5402C /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0D242FB11BF0883200E5402C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D242FB01BF0883200E5402C /* SecondViewController.m */; };
+		0DB164031C9108D500694665 /* ZPAutoAdjustTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB164021C9108D500694665 /* ZPAutoAdjustTextField.m */; };
+		0DB164061C91098300694665 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB164051C91098300694665 /* NSString+Extension.m */; };
+		0DB1640C1C910A6F00694665 /* ZPProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1640B1C910A6F00694665 /* ZPProgressHUD.m */; };
+		0DB1640F1C910E0500694665 /* CALayer+SLPopAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1640E1C910E0500694665 /* CALayer+SLPopAddition.m */; };
 		0DE1EA421BEC52B300B8BE15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA411BEC52B300B8BE15 /* main.m */; };
 		0DE1EA451BEC52B300B8BE15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */; };
 		0DE1EA4D1BEC52B300B8BE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */; };
 		0DE1EA501BEC52B300B8BE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA4E1BEC52B300B8BE15 /* LaunchScreen.storyboard */; };
 		0DE1EA5B1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA5A1BEC52B300B8BE15 /* ZPAutoAdjustTextFieldTests.m */; };
 		0DE1EA661BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA651BEC52B300B8BE15 /* ZPAutoAdjustTextFieldUITests.m */; };
-		0DE1EA7C1BEC52D600B8BE15 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA7E1BEC52D600B8BE15 /* ZPAutoAdjustTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA861BEC535C00B8BE15 /* VBFDoubleSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA871BEC535C00B8BE15 /* VBFPopFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */; settings = {ASSET_TAGS = (); }; };
-		0DE1EA8B1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */; settings = {ASSET_TAGS = (); }; };
-		B26E652234A81D9FB43F86B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841ED2B908502FD88E4105A8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0DE1EA7C1BEC52D600B8BE15 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */; };
+		0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */; };
+		0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */; };
+		0DE1EA801BEC52D600B8BE15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */; };
+		0DE1EA8B1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */; };
+		B26E652234A81D9FB43F86B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841ED2B908502FD88E4105A8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,14 @@
 /* Begin PBXFileReference section */
 		0D242FAF1BF0883200E5402C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		0D242FB01BF0883200E5402C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0DB164011C9108D500694665 /* ZPAutoAdjustTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPAutoAdjustTextField.h; sourceTree = "<group>"; };
+		0DB164021C9108D500694665 /* ZPAutoAdjustTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPAutoAdjustTextField.m; sourceTree = "<group>"; };
+		0DB164041C91098300694665 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		0DB164051C91098300694665 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		0DB1640A1C910A6F00694665 /* ZPProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPProgressHUD.h; sourceTree = "<group>"; };
+		0DB1640B1C910A6F00694665 /* ZPProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPProgressHUD.m; sourceTree = "<group>"; };
+		0DB1640D1C910E0500694665 /* CALayer+SLPopAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SLPopAddition.h"; sourceTree = "<group>"; };
+		0DB1640E1C910E0500694665 /* CALayer+SLPopAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SLPopAddition.m"; sourceTree = "<group>"; };
 		0DE1EA3D1BEC52B300B8BE15 /* ZPAutoAdjustTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPAutoAdjustTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1EA411BEC52B300B8BE15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,15 +71,9 @@
 		0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		0DE1EA751BEC52D600B8BE15 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		0DE1EA771BEC52D600B8BE15 /* ZPAutoAdjustTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPAutoAdjustTextField.h; sourceTree = "<group>"; };
-		0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPAutoAdjustTextField.m; sourceTree = "<group>"; };
 		0DE1EA791BEC52D600B8BE15 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		0DE1EA821BEC535C00B8BE15 /* VBFDoubleSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFDoubleSegment.h; sourceTree = "<group>"; };
-		0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFDoubleSegment.m; sourceTree = "<group>"; };
-		0DE1EA841BEC535C00B8BE15 /* VBFPopFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFPopFlatButton.h; sourceTree = "<group>"; };
-		0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFPopFlatButton.m; sourceTree = "<group>"; };
 		0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "2015-11-06 14_23_43.gif"; sourceTree = "<group>"; };
 		1C9D74C9584859EA46505B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33C0F8A58325C2D301B1C757 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB164101C910F5200694665 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0DB1640D1C910E0500694665 /* CALayer+SLPopAddition.h */,
+				0DB1640E1C910E0500694665 /* CALayer+SLPopAddition.m */,
+				0DE1EA731BEC52D600B8BE15 /* UIView+Extension.h */,
+				0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */,
+				0DB164041C91098300694665 /* NSString+Extension.h */,
+				0DB164051C91098300694665 /* NSString+Extension.m */,
+				0DE1EA751BEC52D600B8BE15 /* UIBarButtonItem+Extension.h */,
+				0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */,
+				0DB1640A1C910A6F00694665 /* ZPProgressHUD.h */,
+				0DB1640B1C910A6F00694665 /* ZPProgressHUD.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		0DE1EA341BEC52B300B8BE15 = {
 			isa = PBXGroup;
 			children = (
@@ -128,20 +148,16 @@
 		0DE1EA3F1BEC52B300B8BE15 /* ZPAutoAdjustTextField */ = {
 			isa = PBXGroup;
 			children = (
+				0DB164101C910F5200694665 /* Category */,
 				0DE1EA8A1BEC7F3C00B8BE15 /* 2015-11-06 14_23_43.gif */,
 				0DE1EA431BEC52B300B8BE15 /* AppDelegate.h */,
 				0DE1EA441BEC52B300B8BE15 /* AppDelegate.m */,
-				0DE1EA731BEC52D600B8BE15 /* UIView+Extension.h */,
-				0DE1EA741BEC52D600B8BE15 /* UIView+Extension.m */,
-				0DE1EA751BEC52D600B8BE15 /* UIBarButtonItem+Extension.h */,
-				0DE1EA761BEC52D600B8BE15 /* UIBarButtonItem+Extension.m */,
-				0DE1EA771BEC52D600B8BE15 /* ZPAutoAdjustTextField.h */,
-				0DE1EA781BEC52D600B8BE15 /* ZPAutoAdjustTextField.m */,
+				0DB164011C9108D500694665 /* ZPAutoAdjustTextField.h */,
+				0DB164021C9108D500694665 /* ZPAutoAdjustTextField.m */,
 				0DE1EA791BEC52D600B8BE15 /* ViewController.h */,
 				0DE1EA7A1BEC52D600B8BE15 /* ViewController.m */,
 				0D242FAF1BF0883200E5402C /* SecondViewController.h */,
 				0D242FB01BF0883200E5402C /* SecondViewController.m */,
-				0DE1EA811BEC535C00B8BE15 /* VBFPopFlatButtonClasses */,
 				0DE1EA7B1BEC52D600B8BE15 /* Main.storyboard */,
 				0DE1EA4C1BEC52B300B8BE15 /* Assets.xcassets */,
 				0DE1EA4E1BEC52B300B8BE15 /* LaunchScreen.storyboard */,
@@ -175,17 +191,6 @@
 				0DE1EA671BEC52B300B8BE15 /* Info.plist */,
 			);
 			path = ZPAutoAdjustTextFieldUITests;
-			sourceTree = "<group>";
-		};
-		0DE1EA811BEC535C00B8BE15 /* VBFPopFlatButtonClasses */ = {
-			isa = PBXGroup;
-			children = (
-				0DE1EA821BEC535C00B8BE15 /* VBFDoubleSegment.h */,
-				0DE1EA831BEC535C00B8BE15 /* VBFDoubleSegment.m */,
-				0DE1EA841BEC535C00B8BE15 /* VBFPopFlatButton.h */,
-				0DE1EA851BEC535C00B8BE15 /* VBFPopFlatButton.m */,
-			);
-			path = VBFPopFlatButtonClasses;
 			sourceTree = "<group>";
 		};
 		2CD8AD5E99FF067FB36C0FF3 /* Frameworks */ = {
@@ -387,13 +392,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB1640F1C910E0500694665 /* CALayer+SLPopAddition.m in Sources */,
 				0D242FB11BF0883200E5402C /* SecondViewController.m in Sources */,
 				0DE1EA7F1BEC52D600B8BE15 /* ViewController.m in Sources */,
-				0DE1EA7E1BEC52D600B8BE15 /* ZPAutoAdjustTextField.m in Sources */,
+				0DB164031C9108D500694665 /* ZPAutoAdjustTextField.m in Sources */,
 				0DE1EA7D1BEC52D600B8BE15 /* UIBarButtonItem+Extension.m in Sources */,
 				0DE1EA7C1BEC52D600B8BE15 /* UIView+Extension.m in Sources */,
-				0DE1EA861BEC535C00B8BE15 /* VBFDoubleSegment.m in Sources */,
-				0DE1EA871BEC535C00B8BE15 /* VBFPopFlatButton.m in Sources */,
+				0DB1640C1C910A6F00694665 /* ZPProgressHUD.m in Sources */,
+				0DB164061C91098300694665 /* NSString+Extension.m in Sources */,
 				0DE1EA451BEC52B300B8BE15 /* AppDelegate.m in Sources */,
 				0DE1EA421BEC52B300B8BE15 /* main.m in Sources */,
 			);
