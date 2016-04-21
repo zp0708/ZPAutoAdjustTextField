@@ -28,6 +28,7 @@
         field.placeholder   = titleArr[i];
         field.font   = [UIFont systemFontOfSize:14];
         field.customDelegate = self;
+        field.delegate = self;
         field.verifyType = CustomTextFieldTextFormMobile;
         field.textType = CustomTextFieldToolbarTypePreviousNextCancelEnsure;
     }
@@ -45,9 +46,8 @@
     NSLog(@"%s",__func__);
 }
 
-- (BOOL)customTextFieldShouldBeginEditing:(ZPAutoAdjustTextField *)textField
-{
-    [textField adjustTextFieldFrameWhenBeginEdtingWithView:self.view];
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [(ZPAutoAdjustTextField *)textField adjustTextFieldFrameWhenBeginEdtingWithView:self.view];
     return YES;
 }
 

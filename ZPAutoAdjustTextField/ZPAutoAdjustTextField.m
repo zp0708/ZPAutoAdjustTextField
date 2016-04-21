@@ -12,7 +12,6 @@
 #import "NSString+Extension.h"
 #import "CALayer+SLPopAddition.h"
 #import "ZPProgressHUD.h"
-#import "POP.h"
 
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
@@ -94,105 +93,86 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
     }
 }
 
-
-- (void)showLabel
+- (void)showFloatingLabel:(BOOL)animated
 {
-    [_placeLbl.layer pop_removeAllAnimations];
-    self.placeLbl.layer.opacity = 1.0;
-    POPSpringAnimation *layerScaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    layerScaleAnimation.springBounciness = 18;
-    layerScaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(.5f, .5f)];
-    [self.placeLbl.layer pop_addAnimation:layerScaleAnimation forKey:@"labelScaleAnimation"];
-    
-    POPBasicAnimation *layerAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-    layerAnimation.toValue = @(30);
-    [self.placeLbl.layer pop_addAnimation:layerAnimation forKey:@"layerAnimation"];
-    
-    POPSpringAnimation *layerPositionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    layerPositionAnimation.toValue = @(-20);
-    layerPositionAnimation.springBounciness = 12;
-    [self.placeLbl.layer pop_addAnimation:layerPositionAnimation forKey:@"layerPositionAnimation"];
-}
-
-- (void)hideLabel
-{
-    [_placeLbl.layer pop_removeAllAnimations];
-    POPBasicAnimation *layerScaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    layerScaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.f, 1.f)];
-    [self.placeLbl.layer pop_addAnimation:layerScaleAnimation forKey:@"layerScaleAnimation"];
-    
-    POPBasicAnimation *layerPositionAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    layerPositionAnimation.toValue = @(5);
-    [self.placeLbl.layer pop_addAnimation:layerPositionAnimation forKey:@"layerPositionAnimation"];
-    layerScaleAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished){
-        if(finished) [self.placeLbl removeFromSuperview];
+    void (^showBlock)() = ^{
+        _placeLbl.alpha = 1.0f;
+        _placeLbl.frame = CGRectMake(0, -_placeLbl.font.lineHeight, self.frame.size.width, _placeLbl.font.lineHeight);
     };
+    
+    if (animated) {
+        [UIView animateWithDuration:0.25
+                              delay:0.0f
+                            options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
+                         animations:showBlock
+                         completion:nil];
+    }
+    else {
+        showBlock();
+    }
 }
 
-- (void)customTextFieldTextDidChange:(ZPAutoAdjustTextField *)sender
+- (void)hideFloatingLabel:(BOOL)animated
 {
-    self.placeLbl.text = [NSString stringWithFormat:@"%@(%ld)",self.placeholder,(long)sender.text.length];
-    [self showOrHiddenTopPlaceholderWithText:sender.text];
-}
-
-- (void)customTextFieldTextDidBegin:(ZPAutoAdjustTextField *)sender
-{
-    [self showOrHiddenTopPlaceholderWithText:sender.text];
-}
-
-- (void)customTextFieldTextDidEnd:(ZPAutoAdjustTextField *)sender
-{
-    [self showOrHiddenTopPlaceholderWithText:@""];
+    void (^hideBlock)() = ^{
+        _placeLbl.alpha = 0.0f;
+        _placeLbl.frame = CGRectMake(0, (self.frame.size.height - _placeLbl.font.lineHeight) * 0.5, self.frame.size.width, _placeLbl.font.lineHeight);
+        
+    };
+    
+    if (animated) {
+        [UIView animateWithDuration:0.25
+                              delay:0.0f
+                            options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseIn
+                         animations:hideBlock
+                         completion:nil];
+    }
+    else {
+        hideBlock();
+    }
 }
 
 - (void)hiddenPlaceLabel
 {
-    [self showOrHiddenTopPlaceholderWithText:@""];
+    [self hideFloatingLabel:self.isFirstResponder];
 }
 
-- (void)customTextFieldTextDidEndOnExit:(ZPAutoAdjustTextField *)sender
-{
-    
-}
-
-- (void)showOrHiddenTopPlaceholderWithText:(NSString *)text
-{
-    /*
-    if (text.length  >= 1) {
-        if (self.placeLbl.y != -20){
-            [self addSubview:self.placeLbl];
-            [UIView animateWithDuration:0.25 animations:^{
-                _placeLbl.y = -20;
-                _placeLbl.alpha = 1;
-            }];
-        }
-    }else{
-        [UIView animateWithDuration:0.25 animations:^{
-            _placeLbl.y = 0;
-            _placeLbl.alpha = 0.01;
-        }completion:^(BOOL finished) {
-            [_placeLbl removeFromSuperview];
-        }];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    _placeLbl.text = self.placeholder;
+    BOOL firstResponder = self.isFirstResponder;
+//    _floatingLabel.textColor = (firstResponder && self.text && self.text.length > 0 ?
+//                                self.labelActiveColor : self.floatingLabelTextColor);
+    if ((!self.text || 0 == [self.text length])) {
+        [self hideFloatingLabel:firstResponder];
     }
-     */
-//    if (text.length  >= 1 && _placeLbl.superview == nil) {
-//        [self addSubview:_placeLbl];
-//        [self showLabel];
-//    }else{
-//    
-//        [self hideLabel];
-//    }
+    else {
+        [self showFloatingLabel:firstResponder];
+    }
+}
+
+- (void)customTextFieldTextDidBegin:(UITextField *)field {
+    field.textColor = [UIColor blackColor];
+}
+
+- (void)customTextFieldTextDidEnd:(UITextField *)field {
+    [self customTextFieldVerifyWithType:_verifyType verifyEmpty:NO];
 }
 
 - (void)setToolbarWithTextType:(CustomTextFieldToolbarType)type
 {
-    self.delegate = self;
+    _placeLbl = [[UILabel alloc]init];
+    _placeLbl.alpha = 0.0;
+    _placeLbl.font = self.font;
+    _placeLbl.frame = CGRectMake(0, (self.frame.size.height - _placeLbl.font.lineHeight) * 0.5, self.frame.size.width, _placeLbl.font.lineHeight);
     
     [self addTarget:self action:@selector(customTextFieldTextDidBegin:)     forControlEvents:UIControlEventEditingDidBegin];
     [self addTarget:self action:@selector(customTextFieldTextDidEnd:)       forControlEvents:UIControlEventEditingDidEnd];
-    [self addTarget:self action:@selector(customTextFieldTextDidChange:)    forControlEvents:UIControlEventEditingChanged];
-    [self addTarget:self action:@selector(customTextFieldTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+//    [self addTarget:self action:@selector(customTextFieldTextDidChange:)    forControlEvents:UIControlEventEditingChanged];
+//    [self addTarget:self action:@selector(customTextFieldTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
+    
+    [self addSubview:_placeLbl];
     self.clipsToBounds = NO;
     UIToolbar *toolbar = [[UIToolbar alloc] init];
     toolbar.frame = CGRectMake(0, 0, SCREENWIDTH, 44);
@@ -227,6 +207,82 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
     self.inputAccessoryView = toolbar;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(customTextFieldKeyboardDidChange:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (UIFont *)defaultFloatingLabelFont
+{
+    UIFont *textFieldFont = nil;
+    
+    if (!textFieldFont && self.attributedPlaceholder && self.attributedPlaceholder.length > 0) {
+        textFieldFont = [self.attributedPlaceholder attribute:NSFontAttributeName atIndex:0 effectiveRange:NULL];
+    }
+    if (!textFieldFont && self.attributedText && self.attributedText.length > 0) {
+        textFieldFont = [self.attributedText attribute:NSFontAttributeName atIndex:0 effectiveRange:NULL];
+    }
+    if (!textFieldFont) {
+        textFieldFont = self.font;
+    }
+    
+    return [UIFont fontWithName:textFieldFont.fontName size:roundf(textFieldFont.pointSize * 0.7f)];
+}
+
+- (void)updateDefaultFloatingLabelFont
+{
+//    UIFont *derivedFont = [self defaultFloatingLabelFont];
+    
+//    if (_isFloatingLabelFontDefault) {
+//        self.floatingLabelFont = derivedFont;
+//    }
+//    else {
+//        // dont apply to the label, just store for future use where floatingLabelFont may be reset to nil
+//        _floatingLabelFont = derivedFont;
+//    }
+}
+#pragma mark - UITextField
+
+- (void)setFont:(UIFont *)font
+{
+    [super setFont:font];
+    [self updateDefaultFloatingLabelFont];
+}
+
+- (void)setAttributedText:(NSAttributedString *)attributedText
+{
+    [super setAttributedText:attributedText];
+    [self updateDefaultFloatingLabelFont];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    CGSize textFieldIntrinsicContentSize = [super intrinsicContentSize];
+    [_placeLbl sizeToFit];
+    return CGSizeMake(textFieldIntrinsicContentSize.width,
+                      textFieldIntrinsicContentSize.height + _floatingLabelYPadding + _placeLbl.bounds.size.height);
+}
+
+- (void)setFloatingLabelText:(NSString *)text
+{
+    _placeLbl.text = text;
+    [self setNeedsLayout];
+}
+
+- (void)setPlaceholder:(NSString *)placeholder
+{
+    [super setPlaceholder:placeholder];
+    [self setFloatingLabelText:placeholder];
+}
+
+- (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder
+{
+    [super setAttributedPlaceholder:attributedPlaceholder];
+    [self setFloatingLabelText:attributedPlaceholder.string];
+    [self updateDefaultFloatingLabelFont];
+}
+
+- (void)setPlaceholder:(NSString *)placeholder floatingTitle:(NSString *)floatingTitle
+{
+    [super setPlaceholder:placeholder];
+    [self setFloatingLabelText:floatingTitle];
 }
 
 - (BOOL)customTextFieldVerifyWithType:(CustomTextFieldVerifyType)type verifyEmpty:(BOOL)verify
@@ -439,78 +495,6 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
     }
 }
 
-#pragma mark - delegate
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldShouldBeginEditing:)]) {
-        return [self.customDelegate customTextFieldShouldBeginEditing:self];
-    }
-    return YES;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-    textField.textColor = [UIColor blackColor];
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldDidBeginEditing:)]) {
-        [self.customDelegate customTextFieldDidBeginEditing:self];
-    }
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldShouldEndEditing:)]) {
-        return [self.customDelegate customTextFieldShouldEndEditing:self];
-    }
-    return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    [self customTextFieldVerifyWithType:_verifyType verifyEmpty:NO];
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldDidEndEditing:)]) {
-        [self.customDelegate customTextFieldDidEndEditing:self];
-    }
-}
-
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    switch (_formStyle) {
-        case CustomTextFieldTextFormMobile:
-            return [self moblieTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-            break;
-        case CustomTextFieldTextFormBankCard:
-            return [self bankCardTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-        break;
-        
-        case CustomTextFieldTextFormIdentity:
-            return [self identityTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-        break;
-
-        default:
-        {
-            if ([self.customDelegate respondsToSelector:@selector(customTextField:shouldChangeCharactersInRange:replacementString:)]) {
-                return [self.customDelegate customTextField:self shouldChangeCharactersInRange:range replacementString:string];
-            }
-            if ([string isEqualToString:@""]) return YES;
-            if(self.verifyType == CustomTextFieldVerifyTypeInvestMoney) return textField.text.length <= 7;
-        }
-            break;
-    }
-    return YES;
-}
-
-- (BOOL)textFieldShouldClear:(UITextField *)textField{
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldShouldClear:)]) {
-        return [self.customDelegate customTextFieldShouldClear:self];
-    }
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self nextCustomTextFieldBecomeFirstResponder];
-    if ([self.customDelegate respondsToSelector:@selector(customTextFieldShouldReturn:)]) {
-        return [self.customDelegate customTextFieldShouldReturn:self];
-    }
-    return YES;
-}
-
 #pragma mark - setter && block && notice
 
 
@@ -623,151 +607,6 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
         NSNotification *notice = [NSNotification notificationWithName:RTHXCustomTextFieldDidClickedEnsureBarButtonItem object:nil userInfo:dict];
         [[NSNotificationCenter defaultCenter] postNotification:notice];
     }
-}
-
-#pragma mark - 格式化代码待优化
-
- - (BOOL)moblieTextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
- {
-     NSString *text = [textField text];
-     
-     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"Xx0123456789\b"];
-     string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-     if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
-     return NO;
-     }
-     
-     text = [text stringByReplacingCharactersInRange:range withString:string];
-     text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
-     
-     if (text.length > 11) {
-     return NO;
-     }
-     
-     NSString *newString = @"";
-     NSString *firstString = @"";
-     NSString *secondString = @"";
-     
-     if (text.length <= 3) {
-     firstString = text;
-     }else{
-     firstString = [text substringToIndex:3];
-     secondString = [text substringFromIndex:3];
-     }
-     
-     while (firstString.length > 0) {
-     NSString *subString = [firstString substringToIndex:MIN(firstString.length, 3)];
-     newString = [newString stringByAppendingString:subString];
-     if (subString.length == 3) {
-     newString = [newString stringByAppendingString:@" "];
-     }
-     firstString = [firstString substringFromIndex:MIN(firstString.length, 3)];
-     }
-     
-     newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
-     if (secondString.length != 0) newString = [newString stringByAppendingString:@" "];
-     textField.text = newString;
-     newString = @"";
-     
-     while (secondString.length > 0) {
-     NSString *subString = [secondString substringToIndex:MIN(secondString.length, 4)];
-     newString = [newString stringByAppendingString:subString];
-     if (subString.length == 4) {
-     newString = [newString stringByAppendingString:@" "];
-     }
-     secondString = [secondString substringFromIndex:MIN(secondString.length, 4)];
-     }
-     newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
-     [textField setText:[NSString stringWithFormat:@"%@%@",textField.text,newString]];
-     [self showOrHiddenTopPlaceholderWithText:textField.text];
-     return NO;
- }
-
-- (BOOL)bankCardTextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSString *text = [textField text];
-    
-    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];
-    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
-        return NO;
-    }
-    
-    text = [text stringByReplacingCharactersInRange:range withString:string];
-    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    if (text.length > 20) {
-        return NO;
-    }
-    
-    NSString *newString = @"";
-    while (text.length > 0) {
-        NSString *subString = [text substringToIndex:MIN(text.length, 4)];
-        newString = [newString stringByAppendingString:subString];
-        if (subString.length == 4) {
-            newString = [newString stringByAppendingString:@" "];
-        }
-        text = [text substringFromIndex:MIN(text.length, 4)];
-    }
-    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
-    [textField setText:newString];
-    [self showOrHiddenTopPlaceholderWithText:textField.text];
-    return NO;
-}
-
-- (BOOL)identityTextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSString *text = [textField text];
-    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"Xx0123456789\b"];
-    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
-        return NO;
-    }
-    
-    text = [text stringByReplacingCharactersInRange:range withString:string];
-    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    if (text.length > 18) {
-        return NO;
-    }
-    
-    NSString *newString = @"";
-    NSString *firstString = @"";
-    NSString *secondString = @"";
-    
-    if (text.length <= 6) {
-        firstString = text;
-    }else{
-        firstString = [text substringToIndex:6];
-        secondString = [text substringFromIndex:6];
-    }
-    
-    while (firstString.length > 0) {
-        NSString *subString = [firstString substringToIndex:MIN(firstString.length, 6)];
-        newString = [newString stringByAppendingString:subString];
-        if (subString.length == 6) {
-            newString = [newString stringByAppendingString:@" "];
-        }
-        firstString = [firstString substringFromIndex:MIN(firstString.length, 6)];
-    }
-    
-    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
-    if (secondString.length != 0) newString = [newString stringByAppendingString:@" "];
-    textField.text = newString;
-    newString = @"";
-    
-    while (secondString.length > 0) {
-        NSString *subString = [secondString substringToIndex:MIN(secondString.length, 4)];
-        newString = [newString stringByAppendingString:subString];
-        if (subString.length == 4) {
-            newString = [newString stringByAppendingString:@" "];
-        }
-        secondString = [secondString substringFromIndex:MIN(secondString.length, 4)];
-    }
-    newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
-    [textField setText:[NSString stringWithFormat:@"%@%@",textField.text,newString]];
-    [self showOrHiddenTopPlaceholderWithText:textField.text];
-    return NO;
 }
 
 - (void)dealloc

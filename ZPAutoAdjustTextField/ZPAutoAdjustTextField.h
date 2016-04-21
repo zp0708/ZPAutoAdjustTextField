@@ -67,6 +67,8 @@ typedef void(^TextFieldCallBack)(UIBarButtonItem * , ZPAutoAdjustTextField *);
 
 - (void)adjustTextFieldFrameWhenBeginEdtingWithView:(UIView *)view;
 - (void)hiddenPlaceLabel;
+
+@property (assign, nonatomic) CGFloat floatingLabelYPadding;
 @end
 
 @protocol CustomTextFieldDelegate <UITextFieldDelegate>
@@ -77,13 +79,5 @@ typedef void(^TextFieldCallBack)(UIBarButtonItem * , ZPAutoAdjustTextField *);
 - (void)customTextField:(ZPAutoAdjustTextField *)textField nextBarButtonItemDidClicked:(UIBarButtonItem *)item;
 - (void)customTextField:(ZPAutoAdjustTextField *)textField cancelBarButtonItemDidClicked:(UIBarButtonItem *)item;
 - (void)customTextField:(ZPAutoAdjustTextField *)textField ensureBarButtonItemDidClicked:(UIBarButtonItem *)item;
-
-- (BOOL)customTextFieldShouldBeginEditing:(ZPAutoAdjustTextField *)textField;
-- (void)customTextFieldDidBeginEditing:(ZPAutoAdjustTextField *)textField;
-- (BOOL)customTextFieldShouldEndEditing:(ZPAutoAdjustTextField *)textField;
-- (void)customTextFieldDidEndEditing:(ZPAutoAdjustTextField *)textField;
-- (BOOL)customTextField:(ZPAutoAdjustTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
-- (BOOL)customTextFieldShouldClear:(ZPAutoAdjustTextField *)textField;
-- (BOOL)customTextFieldShouldReturn:(ZPAutoAdjustTextField *)textField;
 
 @end
