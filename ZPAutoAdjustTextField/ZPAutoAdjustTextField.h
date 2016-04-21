@@ -24,13 +24,6 @@ typedef NS_ENUM(NSInteger, CustomTextFieldToolbarType) {
     CustomTextFieldToolbarTypeCancelEnsure,
 };
 
-typedef NS_ENUM(NSInteger, CustomTextFieldTextForm) {
-    CustomTextFieldTextFormNone, // default
-    CustomTextFieldTextFormMobile,
-    CustomTextFieldTextFormBankCard,
-    CustomTextFieldTextFormIdentity
-};
-
 typedef NS_ENUM(NSInteger, CustomTextFieldVerifyType) {
     CustomTextFieldVerifyTypeNone,        // default
     CustomTextFieldVerifyTypeMobile,
@@ -63,9 +56,7 @@ typedef void(^TextFieldCallBack)(UIBarButtonItem * , ZPAutoAdjustTextField *);
 //@property (weak,   nonatomic) id<CustomTextFieldDelegate> delegate;
 
 @property (assign, nonatomic,readonly) BOOL isPassed;
-@property (assign, nonatomic) CustomTextFieldTextForm formStyle;
 
-- (void)adjustTextFieldFrameWhenBeginEdtingWithView:(UIView *)view;
 - (void)hiddenPlaceLabel;
 
 @property (assign, nonatomic) CGFloat floatingLabelYPadding;

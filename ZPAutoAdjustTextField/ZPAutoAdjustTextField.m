@@ -75,22 +75,15 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
     }
 }
 
+- (void)didMoveToSuperview {
+    [super didMoveToSuperview];
+    
+    self.adjustView = self.superview;
+}
+
 - (void)adjustTextFieldFrameWhenBeginEdtingWithView:(UIView *)view
 {
-    self.adjustView = view;
-    if (_adjustHeight > -44) {
-        [UIView animateWithDuration:0.25 animations:^{
-            view.y = - _adjustHeight - 20;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }else{
-        [UIView animateWithDuration:0.25 animations:^{
-            view.y = 0;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }
+
 }
 
 - (void)showFloatingLabel:(BOOL)animated
@@ -153,6 +146,19 @@ NSString * const RTHXCustomTextFieldCustomTextField                             
 
 - (void)customTextFieldTextDidBegin:(UITextField *)field {
     field.textColor = [UIColor blackColor];
+    if (_adjustHeight > -44) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.superview.y = - _adjustHeight - 50;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }else{
+        [UIView animateWithDuration:0.25 animations:^{
+            self.superview.y = 0;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 - (void)customTextFieldTextDidEnd:(UITextField *)field {
